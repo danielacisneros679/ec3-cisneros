@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/bootstrap/bootstrap.css}"
+          rel="stylesheet" >
+</head>
+<body>
+
+<div class="card">
+    <div class="card-header">
+        REGISTRO DE NOTAS
+    </div>
+    <div class="card-body">
+        <form th:action="@{/calcularpromedio}" method="post"
+              th:object="${promediomodel}">
+            <div class="mb-3">
+                <label for="txtnt1" class="form-label">Ingrese su 1ra nota:</label>
+                <input type="number" class="form-control" id="txtnt1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="txtnt2" class="form-label">Ingrese su 2da nota:</label>
+                <input type="number" class="form-control" id="txtnt2" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="txtnt3" class="form-label">Ingrese su 3ra nota:</label>
+                <input type="number" class="form-control" id="txtnt3" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="txtnt4" class="form-label">Ingrese su nota final:</label>
+                <input type="number" class="form-control" id="txtnt4" placeholder="name@example.com">
+            </div>
+            <button type="button" class="btn btn-primary">CALCULAR</button>
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>
